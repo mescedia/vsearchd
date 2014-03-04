@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<settings> 
+	
+	<listen-address>127.0.0.1</listen-address>
+	<listen-port>8282</listen-port>
+	
+	<!-- total amoumt of http-request per seconds valid for all running projects -->
+	<max-requests-per-second>200</max-requests-per-second>
+	
+	<!--  source factory instances --> 
+	<number-http-clients>200</number-http-clients> 
+	
+	<!-- crawler projects -->
+	<number-max-clients>200</number-max-clients>
+	
+	<!-- 1 message thread in backend might be enough for most needs  -->
+	<number-message-threads>1</number-message-threads>	
+	
+	
+</settings>
+
