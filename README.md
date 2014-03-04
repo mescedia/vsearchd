@@ -4,17 +4,15 @@
 
 To build: 
 
+$ git clone https://github.com/mickassnel/vsearchd.git 
 
- $ git clone https://github.com/mickassnel/vsearchd.git 
+$ cd vsearchd/ 
 
- $ cd vsearchd/ 
+$ mvn clean package 
  
- $ mvn clean package 
-  
- 
+
 To run: 
 
+$ cd target/ 
 
- $ cd target/ 
- 
- $ java -jar target/vsearchd-crawler-0.3.1.jar 
+$ java -jar vsearchd-crawler-0.3.1.jar 
