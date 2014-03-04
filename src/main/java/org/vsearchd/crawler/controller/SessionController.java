@@ -93,16 +93,10 @@ public class SessionController {
 	}
 
 	public void addDocument(String _msg) {
-		// the initial server document will always be added to the primaryQueue
-		// !!!
+
 		this.serverDocumentManager.addPrimaryQueueMessage(_msg);
 	}
-
-	/**
-	 * 
-	 * @param initial
-	 * @return
-	 */
+	
 	public synchronized boolean runController(boolean initial) {
 
 		try {
@@ -270,9 +264,6 @@ public class SessionController {
 		return false;
 	}
 
-	/**
-	 * client exit preparation
-	 */
 	private void prepareClientExit() {
 
 		try {

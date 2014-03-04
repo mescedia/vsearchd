@@ -85,22 +85,6 @@ public class ServerDocumentProvider {
 
 	public synchronized void resetServerDocument(ServerDocument sDoc) {
 		this.serverDocuments[sDoc.getID()].Reset();
-		inUse[sDoc.getID()] = false;
-
-		// //synchronized(this.serverDocuments) {
-		// sDoc.Reset();
-		// for (int i = inUse.length-1; i >= 0; i--)
-		// if (this.serverDocuments[i].equals(sDoc)) {
-		// log.debug("remove ServerDocument from pool [" + String.valueOf(i) +
-		// "] ... ") ;
-		// //synchronized (inUse) {
-		// inUse[i] = false;
-		// //}
-		// //this.serverDocuments[i].Reset();
-		// break;
-		// }
-		// //}
-		// throw new RuntimeException("could not reset ServerDocument ... " +
-		// String.valueOf(sDoc.getID()) );
+		inUse[sDoc.getID()] = false;		
 	}
 }
