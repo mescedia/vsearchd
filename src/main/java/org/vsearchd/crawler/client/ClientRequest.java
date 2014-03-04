@@ -1,44 +1,3 @@
-/* 	  CLIENT REQUEST (sampels) :
-
- <?xml version="1.0" encoding="UTF-8" ?>
- <request type="run_project">
- <auth-key value="mickas-develop-0123456789" />
- <user value="mickas" />                 
- <project name="www.heise.de" delay="300" />               
-
- <jms-server connection-string="failover:tcp://localhost:61616" queue="develop-delay-2" user="jmsUser" passwd="jmsPasswd" />
- <!-- jdbc jdbc:mysql://192.168.178.32:3306/MeineDb?useUnicode=true&characterEncoding=UTF-8 -->
- <jdbc-server connection-string="jdbc:mysql://127.0.0.1:3306/testmk?useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8" 
- driver="com.mysql.jdbc.Driver" user="lisa" passwd="passwd" />
-
- <!-- http|https -->
- <http-server  host="127.0.0.1" port="80" filepath="/file/input.do"  method="post" />
- <https-server  host="127.0.0.1" port="443" filepath="/file/input.do"  method="post" />
-
- <http-parameter name="name1" value="value1" />
- <http-parameter name="name2" value="value2" />
- <xslt-parameter name="name1" value="value1" />
- <xslt-parameter name="name2" value="value2" />
- </request>
-
- <?xml version="1.0" encoding="UTF-8" ?>
- <request type="set_source">
- <auth-key value="mickas-develop-0123456789" />
- <user value="develop" /> <!-- part of path -->     
- <command value="set_source" />      
-
- <options server-request="/ccraw/projects/develop/localhost_test_1/index_request.xml" 		
- outfile="wwwlocalhosttest1" />
-
- <project name="localhost_test_1" delay="100" />  
-
- <http-parameter name="name1" value="value1" />
- <http-parameter name="name2" value="value2" />
- <xslt-parameter name="name1" value="value1" />
- <xslt-parameter name="name2" value="value2" />
- </request>
- */
-
 package org.vsearchd.crawler.client;
 
 import java.util.ArrayList;
@@ -46,6 +5,10 @@ import java.util.Hashtable;
 
 import org.vsearchd.crawler.backend.BackendServer;
 
+/*
+ * @author Michael Kassnel
+ *
+ */
 public class ClientRequest {
 
 	private String authKey = null;

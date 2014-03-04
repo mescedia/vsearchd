@@ -1,3 +1,21 @@
+/*
+ * vsearchd - a vertical search engine (crawler)
+ *
+ * Copyright (C) 2012-2014  Michael Kassnel 
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License (Version 3) as published
+ * by the Free Software Foundation.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.
+ * 
+ * See the GNU Lesser General Public License for more details:
+ * http://www.gnu.org/licenses/lgpl.txt
+ *
+ */
+
 package org.vsearchd.crawler.controller;
 
 import org.vsearchd.crawler.sourceengine.ISourceEngine;
@@ -7,69 +25,6 @@ import org.xml.sax.Attributes;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.Locator;
 import org.xml.sax.SAXException;
-
-
-//reads this ...
-/*
- * 
- <?xml version="1.0" encoding="UTF-8" ?>
- <server-document>
- <xslt-parameter name="proxy_enabled" value="false" />
- <xslt-parameter name="proxy_host" value="127.0.0.1" />
- <xslt-parameter name="proxy_port" value="18118" />
-
-
- <mapping mandatory-source-engine="tika" file="/root/workspace/com.ccraw.server/src/com/ccraw/server/tests/server-mapping.xslt" />			
- <urirequest name="initialRequest" root-tag="true" http-header="true" dtd="html" delay="6000" timeout="30000" retry="3">
-
- <source-engine name="none">	      
- <content-type value="text/xml" />	    		
- </source-engine>
-
- <source-engine name="tidy">	      
- <content-type value="text/html" />
- <content-type value="text/xhtml" />
- <remove-content  value="xmlns=&quot;http://www.w3.org/1999/xhtml&quot;"  />
- <remove-content  value="xmlns=&quot;http://www.w3.org/2005/Atom&quot;"  /> 
- <!-- regex-replace not implemented yet -->
- <regex-replace  pattern="asdlasj(&quot;&quot;)d" replace="testIt"  /> 
- </source-engine>
-
- <!--  binary content -->
- <source-engine name="bina">	      
- <content-type value="image/jpeg" />
- <content-type value="image/png" />		
- </source-engine>
-
- <source-engine name="tika">	      
- <content-type value="application/pdf" />
- <content-type value="application/msword" />
- <content-type value="*" /> <!-- must appear only once -->		
- </source-engine>
-
-
- <method value="GET" />
- <field name="host" value="127.0.0.1" /> 
- <field name="path" value="/info.php" />
- <field name="port" value="80" />
- <field name="protocol" value="HTTP" />
- <header name="User-Agent" value="Mozilla/5.1 (Windows; U; Windows NT 5.1; de; rv:1.8.4.06) Gecko/20091201 Firefox/3.0.5.12" />
- <header name="Accept-Language" value="de-de,de;q=0.8" />
- <header name="Accept" value="text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,**;q=0.5" />
- <header name="Accept-Charset" value="ISO-8859-1,utf-8;" />
- <header name="Keep-Alive" value="false" />
-
- <http-parameter name="a" value="by" />			  
- <http-parameter name="b2" value="by" />	
- <http-parameter name="b3" value="by" />	
- <http-parameter name="did" value="361934" />
-
- <!--   <proxy host="127.0.0.1" port="8888" /> 
-
- </urirequest>
- </server-document>
-
- * */
 
 public class ServerDocumentContentHandler implements ContentHandler {
 

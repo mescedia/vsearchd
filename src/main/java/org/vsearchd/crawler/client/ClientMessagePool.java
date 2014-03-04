@@ -2,6 +2,10 @@ package org.vsearchd.crawler.client;
 
 import java.util.concurrent.*;
 
+/*
+ * @author Michael Kassnel
+ *
+ */
 public class ClientMessagePool {
 
 	private BlockingQueue<String> queue = new LinkedBlockingQueue<String>();

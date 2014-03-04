@@ -1,3 +1,21 @@
+/*
+ * vsearchd - a vertical search engine (crawler)
+ *
+ * Copyright (C) 2012-2014  Michael Kassnel 
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License (Version 3) as published
+ * by the Free Software Foundation.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.
+ * 
+ * See the GNU Lesser General Public License for more details:
+ * http://www.gnu.org/licenses/lgpl.txt
+ *
+ */
+
 package org.vsearchd.crawler.backend;
 
 import java.io.IOException;
@@ -35,7 +53,6 @@ import org.vsearchd.crawler.outmessage.OutputMessage;
 import org.vsearchd.crawler.outmessage.OutputMessageFactory;
 import org.vsearchd.crawler.outmessage.OutputMessageReader;
 
-
 public class BackendSessionHTTPS extends BackendSessionBase implements
 		IBackendSession {
 
@@ -65,8 +82,7 @@ public class BackendSessionHTTPS extends BackendSessionBase implements
 		HttpProtocolParams.setVersion(params, HttpVersion.HTTP_1_1);
 		HttpProtocolParams.setContentCharset(params, "UTF-8");
 		HttpProtocolParams.setUseExpectContinue(params, false);
-		HttpProtocolParams
-			.setUserAgent(params, "vsearchd::www.vsearchd.org");
+		HttpProtocolParams.setUserAgent(params, "vsearchd::backend-worker");
 		HttpConnectionParams.setStaleCheckingEnabled(params, false);
 
 		httppost.setParams(params);

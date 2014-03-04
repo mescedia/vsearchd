@@ -10,6 +10,10 @@ import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
 
+/*
+ * @author Michael Kassnel
+ *
+ */
 public class ClientRequestReader {
 
 	private Logger log = LoggerFactory.getLogger(getClass().getName());

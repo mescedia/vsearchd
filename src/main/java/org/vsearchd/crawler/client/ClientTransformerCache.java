@@ -7,6 +7,10 @@ import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamSource;
 
+/*
+ * @author Michael Kassnel
+ *
+ */
 public class ClientTransformerCache {
 
 	private Transformer transformer = null;

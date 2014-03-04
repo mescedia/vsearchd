@@ -7,6 +7,10 @@ import org.xml.sax.ContentHandler;
 import org.xml.sax.Locator;
 import org.xml.sax.SAXException;
 
+/*
+ * @author Michael Kassnel
+ *
+ */
 public class ClientRequestHandler implements ContentHandler {
 
 	private ClientRequest request = new ClientRequest();

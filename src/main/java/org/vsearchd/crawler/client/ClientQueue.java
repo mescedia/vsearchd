@@ -6,6 +6,11 @@ import java.util.concurrent.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/*
+ * @author Michael Kassnel
+ *
+ */
+
 public class ClientQueue {
 
 	private Logger log = LoggerFactory.getLogger(getClass().getName());

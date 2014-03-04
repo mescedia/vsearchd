@@ -7,6 +7,10 @@ import org.slf4j.LoggerFactory;
 import org.vsearchd.crawler.backend.BackendSessionHandler;
 import org.vsearchd.crawler.controller.ServerDocumentPoolManager;
 
+/*
+ * @author Michael Kassnel
+ *
+ */
 public class Client {
 
 	private Logger log = LoggerFactory.getLogger(getClass().getName());

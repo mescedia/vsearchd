@@ -1,5 +1,9 @@
 package org.vsearchd.crawler.controller;
 
+/*
+ * @author Michael Kassnel
+ *
+ */
 public interface IServerDocumentPool {
 
 	public Boolean containsMessage();

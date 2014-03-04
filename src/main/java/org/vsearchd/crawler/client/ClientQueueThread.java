@@ -11,6 +11,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.vsearchd.crawler.controller.SessionController;
 
+/*
+ * @author Michael Kassnel
+ *
+ */
+
 public class ClientQueueThread implements Runnable {
 
 	private Logger log = LoggerFactory.getLogger(getClass().getName());
