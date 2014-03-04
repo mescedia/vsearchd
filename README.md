@@ -1,14 +1,14 @@
 
 <h2>vsearchd - a vertical search engine (crawler)</h2>
-<hr>
 
-To build:
 
- $ git clone https://github.com/mickassnel/vsearchd.git
- $ cd vsearchd/
- $ mvn clean package 
+To build: <br>
+
+ $ git clone https://github.com/mickassnel/vsearchd.git <br>
+ $ cd vsearchd/ <br>
+ $ mvn clean package <br> 
  
-To run: 
+To run: <br>
 
- $ cd target/
- $ java -jar target/vsearchd-crawler-0.3.1.jar
+ $ cd target/ <br>
+ $ java -jar target/vsearchd-crawler-0.3.1.jar <br>
