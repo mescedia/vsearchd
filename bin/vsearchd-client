@@ -1,0 +1,5 @@
+#!/bin/bash
+
+in=$(cat $1 | tr "\n" " ")
+echo $in | nc 127.0.0.1 8282
+
