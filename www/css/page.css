@@ -1,0 +1,93 @@
+
+html, body{ 
+ margin:0; 
+ padding:0; 
+ text-align:center; 
+ font-size:0.9em;
+} 
+ 
+#pagewidth{ 
+ width:1000px; 
+ text-align:left; 
+ margin:0 auto; 
+} 
+ 
+#header{
+ position:relative; 
+ height:120px; 
+ background-color:#f0f0f0; 
+ width:100%;
+ display:block;
+ overflow:auto;
+ padding:10px;
+} 
+ 
+#leftcol{
+ width:150px; 
+ float:left; 
+ position:relative; 
+ background-color:#FFFFFF; 
+ height:500px;
+ }
+ 
+#maincol{
+ background-color: #FFFFFF;  
+ position: relative; 
+ width:850px;
+ float:right;  
+ }
+ 
+#footer{
+ height:80px; 
+  background-color:#f0f0f0; 
+ clear:both;
+ display:block;
+ overflow:auto;
+}  
+
+.clearfix:after {
+ content: "."; 
+ display: block; 
+height: 0; 
+ clear: both; 
+ visibility: hidden;
+ }
+ 
+.clearfix{display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix{height: 1%;}
+.clearfix{display: block;}
+/* End hide from IE-mac */  
+ 
+     
+ @media print{ 
+/*hide the left column when printing*/ 
+#leftcol{display:none;} 
+#twocols, #maincol{width:100%; float:none;}
+}
+
+/* menu */
+.menu_div ul {
+    padding:0px;
+    margin:0px;
+    color:#FFF;
+    list-style:none;
+    text-indent:15px;
+}
+.menu_div ul li {
+    background:#fff;
+    line-height:28px;
+}
+.menu_div ul li a {
+    text-decoration:none;
+    color:#000;
+    display:block;
+}
+.menu_div ul li a:hover {    
+    text-decoration:underline;
+}
+
+.menu_div ul li#active {
+   font-weight:bold;
+}

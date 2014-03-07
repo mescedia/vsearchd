@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<request type="run_project"> 
+	
+	<!-- has currently no effect -->
+	<auth-key value="not-implemented-yet" /> 
+	
+	<!--will be displayed in server log -->
+	<user value="myUserName" />
+	  
+	<!-- project-name will appear in server log  --> 
+	<!-- you should alway be gentle an define a reasonable project delay in ms --> 
+	<project name="vsd-2" delay="1000" /> 
+	
+	<!-- the initial request file location  --> 
+	<!-- make sure vsearchd is able to read all the project files  --> 
+	<options server-request="/home/mickassnel/vsearchd/examples/3-reading-various-documents/map/index.xml" />	
+	
+	<!-- backend dev/null - no backend output in this example -->
+	<!-- additional backens are supported: jdbc, jms, http, https - see details in sample 4-backends  -->
+	<backend type="dev-null" /> 
+		
+	<!-- xslt-parameter defined in the request file -->
+	<xslt-parameter name="client" value="xslt-client-1" />	
+	
+	<!-- http-parameter defined in the request file - has no affect in this example -->
+	<http-parameter name="client" value="http-client-1" />
+	
+</request>

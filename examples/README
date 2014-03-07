@@ -1,0 +1,40 @@
+
+README
+======
+
+
+project website: https://www.vsearchd.org (comming up next)
+
+email: mickassnel{at}vsearchd{dot}org
+
+
+All examples require a running vsearchd instance. The servers default listening TCP interface is: 127.0.0.1:8282 
+
+Before running these examples it is a good idea to add 'vsearchd-client.sh' to your PATH environment variable.
+You will find it in the 'bin' folder below the projects root directory.
+
+You will also have to ajust all absolte paths in all files below the 'req' and 'map' folders.
+
+All examples target the projects test-pages on https://www.vsearchd.org/test-pages/. 
+Alternatively you may ajust the project mapping files and use another location. The testpages (static HTML) resists in the 'www' folder 
+below the projects root directory. 
+
+
+To run an example change to the projects request folder 'req' and start the project:
+
+	$ vsearchd-client ./run-project.xml
+
+See servers output for details/results. 
+
+There's currently not much documentation on this so you might browse the 'map' folder for details which contains one xml and a some xslt files.
+These files basically contain the crawler instructions: where to go, what information to collect and how to process it.  
+
+In the time of writing (v0.3.1) vsearchd provides some basic functionality and the examples listed offer some basic understanding 
+of the crawlers capabilities.
+You will have to add your own code and let your xslt-mappings interact with extension elements to receive adequate results. 
+And this will be the point where things are getting interesting - promised.
+
+
+
+Enjoy
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<server-document>	
+  
+	<!-- -->
+	<xslt-parameter name="HttpHost" value="www.vsearchd.org" />
+	<xslt-parameter name="HttpDirPath" value="/test-pages/" />	
+	<xslt-parameter name="ProjectPath" value="/home/mickassnel/vsearchd/examples/3-reading-various-documents/map/" />
+	<!-- -->
+	<mapping file="/home/mickassnel/vsearchd/examples/3-reading-various-documents/map/index.map.xslt" />
+	<!-- -->
+	<urirequest name="initialRequest" root-tag="true"
+		http-header="true" dtd="html" delay="6000" timeout="30000" retry="6"> 
+		
+		<!-- we use tidy in this sample -->
+		<source-engine name="tidy">
+			<content-type value="text/html" />
+			<content-type value="text/html;charset=utf-8" />
+		</source-engine>
+
+		<method value="GET" />
+		<field 	name="host" value="www.vsearchd.org" />
+		<field 	name="path" value="/test-pages/page3.html" />
+		<field 	name="port" value="443" />
+		<field 	name="protocol" value="HTTPS" />
+		
+		<header name="User-Agent" value="vsearchd::crawler" />	
+		<header name="Accept" value="text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5" />
+		<header name="Accept-Charset" value="ISO-8859-1,utf-8;" />
+		<header name="Keep-Alive" value="false" />
+		<header name="Connection" value="close" />	
+		  
+	</urirequest>
+	
+</server-document>
