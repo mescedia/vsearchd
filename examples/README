@@ -32,8 +32,8 @@ for details which contains one xml and a some xslt files. These files basically 
 the crawler instructions: where to go, what information to collect and how to process it.  
 
 In the time of writing vsearchd provides some basic functionality and the examples listed 
-offer some basic understanding of the crawlers capabilities. You will have to add your own code 
-and let your xslt-mappings interact with extension elements to receive adequate results. 
+offer some basic understanding of the crawlers capabilities. You will have to add your own 
+code and let your xslt-mappings interact with extension elements to receive adequate results. 
 And this will be the point where things are getting interesting - promised.
 
 
