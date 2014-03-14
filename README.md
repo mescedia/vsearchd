@@ -2,8 +2,6 @@
 <h2>vsearchd - a focused web-crawler</h2>
 
 
-project website: https://www.vsearchd.org (comming up next)
-
 vsearchd is an extensible and highly customizable web-crawler serving multiple backends. 
 
 It represents the base of a vertical search engine.
@@ -26,4 +24,4 @@ To run:
 
 
 
-See example folder for basic usage and additinal information. 
+See example folder for basic usage and additional information. 

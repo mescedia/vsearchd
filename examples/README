@@ -3,14 +3,12 @@ README
 ======
 
 
-project website: https://www.vsearchd.org (comming up next)
-
 email: mickassnel{at}vsearchd{dot}org
 
 
 All examples require a running vsearchd instance. 
 
-Before running the examples it is a good idea to add 'vsearchd-client.sh' to your 
+Before running these examples it is a good idea to add 'vsearchd-client.sh' to your 
 PATH environment variable. You will find it in the 'bin' folder below the projects 
 root directory.
 

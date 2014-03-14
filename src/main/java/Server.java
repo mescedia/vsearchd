@@ -38,7 +38,7 @@ public class Server {
 	public static void main(String[] args) throws Exception {
 		Logger log = LoggerFactory.getLogger(Server.class);
 		XMLConfiguration configFile = null;
-		
+
 		try {
 			configFile = new XMLConfiguration("config.xml");
 		} catch (ConfigurationException e) {
