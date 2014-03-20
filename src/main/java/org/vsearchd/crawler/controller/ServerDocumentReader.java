@@ -1,5 +1,5 @@
 /*
- * vsearchd - a focused web-crawler
+ * vsearchd - a focused crawler
  *
  * Copyright (C) 2012-2014  Michael Kassnel 
  * 
