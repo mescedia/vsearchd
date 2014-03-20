@@ -1,5 +1,5 @@
 /*
- * vsearchd - a vertical search engine (crawler)
+ * vsearchd - a focused web-crawler
  *
  * Copyright (C) 2012-2014  Michael Kassnel 
  * 
@@ -28,6 +28,7 @@ import java.util.Date;
 
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.binary.Base64;
+import org.jsoup.Jsoup;
 
 public class StringFunctions {
 
@@ -65,6 +66,11 @@ public class StringFunctions {
 			throws UnsupportedEncodingException {
 		return str.replaceAll("\'", "&apos;");
 	}
+	
+	public static String replaceAmp(String str)
+			throws UnsupportedEncodingException {
+		return str.replaceAll("&", "&amp;");
+	}
 
 	public static String replaceLtGt(String str)
 			throws UnsupportedEncodingException {
@@ -79,6 +85,26 @@ public class StringFunctions {
 		Date dt = new Date();
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		return df.format(dt);
+	}
+	
+	public static String removeTags(String str) {
+		String oldStr = "";
+		String newStr = Jsoup.parse(str).text();		
+	    while(!oldStr.equals(newStr))	{
+	    	oldStr = newStr ;
+	    	newStr = Jsoup.parse(oldStr).text();	    	
+	    }
+	    return newStr;
+	}
+	
+	public static String detoxifyText(String str) throws UnsupportedEncodingException	{
+		
+		str = StringFunctions.removeTags(str);
+		str = StringFunctions.replaceAmp(str);
+		str = StringFunctions.replaceApos(str);
+		str = StringFunctions.replaceQuotes(str);
+		
+		return str ;
 	}
 
 }

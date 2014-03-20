@@ -1,5 +1,5 @@
 /*
- * vsearchd - a vertical search engine (crawler)
+ * vsearchd - a focused web-crawler
  *
  * Copyright (C) 2012-2014  Michael Kassnel 
  * 
