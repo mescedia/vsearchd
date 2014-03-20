@@ -1,5 +1,5 @@
 
-<h2>vsearchd - a focused web-crawler</h2>
+<h2>vsearchd - a focused crawler</h2>
 
 
 vsearchd is an extensible and highly customizable web-crawler serving multiple backends. 
