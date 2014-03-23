@@ -1,0 +1,19 @@
+User-agent: WebReaper
+Disallow: /
+
+User-agent: Slurp
+Crawl-delay: 18
+
+# robots.txt for example.com
+# excluded crawler
+User-agent: Sidewinder
+Disallow: /
+ 
+User-agent: Microsoft.URL.Control
+Disallow: /
+ 
+# 
+User-agent: *
+Disallow: /default.html
+Disallow: /Temp/ # some additional comment
+Disallow: /Privat/Familie/Geburtstage.html # go away
