@@ -256,7 +256,7 @@ public class SessionController {
 			
 			this.prepareClientExit();
 
-			log.info("session finished ...");
+			log.debug("session finished ...");
 		} catch (Exception ex) {
 			log.error(ex.getMessage());
 			log.error(" ***** ERROR in runController - this should not happen ****** ");
