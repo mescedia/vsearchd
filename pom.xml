@@ -48,7 +48,7 @@
 						org.apache.httpcomponents,mysql,com.googlecode.juniversalchardet,
 						net.sf.jtidy,org.apache.activemq,org.apache.mina,javax.mail,
 						commons-collections,commons-configuration,commons-lang,
-						  net.sourceforge.htmlcleaner</includeGroupIds> <!-- commons-logging, -->
+						  net.sourceforge.htmlcleaner,org.jsoup,org.json</includeGroupIds> <!-- commons-logging, -->
 				<outputDirectory>${project.build.directory}/lib/</outputDirectory>
 			</configuration>
 		  </execution>
