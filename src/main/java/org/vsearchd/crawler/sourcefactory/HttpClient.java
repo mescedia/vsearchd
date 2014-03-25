@@ -577,8 +577,12 @@ public class HttpClient {
 				this.currentEngine = this.uriRequest.getHtmlCleanerSourceEngine();
 			else if (this.uriRequest.getMandatorySourceEngine().equalsIgnoreCase("tika"))
 				this.currentEngine = this.uriRequest.getTikaSourceEngine();
-			else if (this.uriRequest.getMandatorySourceEngine().equalsIgnoreCase("binary"))
+			else if (this.uriRequest.getMandatorySourceEngine().equalsIgnoreCase("binary"))				
 				this.currentEngine = this.uriRequest.getBinarySourceEngine();
+			else if (this.uriRequest.getMandatorySourceEngine().equalsIgnoreCase("robots"))				
+				this.currentEngine = this.uriRequest.getRobotsSourceEngine();
+			else if (this.uriRequest.getMandatorySourceEngine().equalsIgnoreCase("json"))				
+				this.currentEngine = this.uriRequest.getJsonSourceEngine();
 			else {
 				log.warn("unknown mandatory-source-engine:"
 						+ this.uriRequest.getMandatorySourceEngine());
@@ -629,6 +633,22 @@ public class HttpClient {
 				return;
 			}
 		}
+		for (String cntTyp : this.uriRequest.getRobotsSourceEngine()
+				.getContentTypes()) {
+			if (this.contentType.indexOf(cntTyp.trim()) > -1) {
+				this.currentEngine = this.uriRequest.getRobotsSourceEngine();
+				return;
+			}
+		}
+		for (String cntTyp : this.uriRequest.getJsonSourceEngine()
+				.getContentTypes()) {
+			if (this.contentType.indexOf(cntTyp.trim()) > -1) {
+				this.currentEngine = this.uriRequest.getJsonSourceEngine();
+				return;
+			}
+		}
+		
+		
 
 		for (String cntTyp : this.uriRequest.getTidySourceEngine()
 				.getContentTypes()) {
@@ -670,6 +690,20 @@ public class HttpClient {
 				.getContentTypes()) {
 			if (cntTyp.equalsIgnoreCase("*")) {
 				this.currentEngine = this.uriRequest.getBinarySourceEngine();
+				return;
+			}
+		}
+		for (String cntTyp : this.uriRequest.getRobotsSourceEngine()
+				.getContentTypes()) {
+			if (cntTyp.equalsIgnoreCase("*")) {
+				this.currentEngine = this.uriRequest.getRobotsSourceEngine();
+				return;
+			}
+		}
+		for (String cntTyp : this.uriRequest.getJsonSourceEngine()
+				.getContentTypes()) {
+			if (cntTyp.equalsIgnoreCase("*")) {
+				this.currentEngine = this.uriRequest.getJsonSourceEngine();
 				return;
 			}
 		}
