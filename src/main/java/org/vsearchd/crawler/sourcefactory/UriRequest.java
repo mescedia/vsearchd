@@ -26,7 +26,9 @@ import org.vsearchd.crawler.sourceengine.ISourceEngine;
 import org.vsearchd.crawler.sourceengine.SourceEngineBinary;
 import org.vsearchd.crawler.sourceengine.SourceEngineDevNull;
 import org.vsearchd.crawler.sourceengine.SourceEngineHtmlCleaner;
+import org.vsearchd.crawler.sourceengine.SourceEngineJson;
 import org.vsearchd.crawler.sourceengine.SourceEngineNone;
+import org.vsearchd.crawler.sourceengine.SourceEngineRobots;
 import org.vsearchd.crawler.sourceengine.SourceEngineTidy;
 import org.vsearchd.crawler.sourceengine.SourceEngineTika;
 
@@ -63,7 +65,9 @@ public class UriRequest implements IResetHandler, Serializable {
 	private SourceEngineTika tikaSourceEngine = new SourceEngineTika();
 	private SourceEngineTidy tidySourceEngine = new SourceEngineTidy();
 	private SourceEngineHtmlCleaner htmlCleanerSourceEngine = new SourceEngineHtmlCleaner();
-	private SourceEngineDevNull devNullSourceEngine = new SourceEngineDevNull();
+	private SourceEngineDevNull devNullSourceEngine = new SourceEngineDevNull();	
+	private SourceEngineRobots robotsSourceEngine = new SourceEngineRobots();
+	private SourceEngineJson  jsonSourceEngine = new SourceEngineJson();
 
 	public UriRequest() {
 
@@ -92,7 +96,23 @@ public class UriRequest implements IResetHandler, Serializable {
 	public ISourceEngine getBinarySourceEngine() {
 		return this.binarySourceEngine;
 	}
+	
+	public ISourceEngine getRobotsSourceEngine() {
+		return this.robotsSourceEngine;
+	}
+	
+	public ISourceEngine getJsonSourceEngine() {
+		return this.jsonSourceEngine;
+	}
+	
+	public void setRobotsSourceEngine(SourceEngineRobots ie) {
+		this.robotsSourceEngine = ie;
+	}
 
+	public void setJsonSourceEngine(SourceEngineJson ie) {
+		this.jsonSourceEngine = ie;
+	}
+	
 	public void setDevNullSourceEngine(SourceEngineDevNull ie) {
 		this.devNullSourceEngine = ie;
 	}
@@ -306,6 +326,8 @@ public class UriRequest implements IResetHandler, Serializable {
 		this.tikaSourceEngine.Reset();
 		this.htmlCleanerSourceEngine.Reset();
 		this.devNullSourceEngine.Reset();
+		this.robotsSourceEngine.Reset();
+		this.jsonSourceEngine.Reset();
 
 		this.mandatorySourceEngine = null;
 

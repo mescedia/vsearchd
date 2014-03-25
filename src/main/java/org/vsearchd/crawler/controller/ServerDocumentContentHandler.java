@@ -80,6 +80,12 @@ public class ServerDocumentContentHandler implements ContentHandler {
 			else if (atts.getValue("name").equalsIgnoreCase("devnull"))
 				this.currentSourceEngine = this.serverDocument.uriRequest
 						.getDevNullSourceEngine();
+			else if (atts.getValue("name").equalsIgnoreCase("robots"))
+				this.currentSourceEngine = this.serverDocument.uriRequest
+						.getRobotsSourceEngine();
+			else if (atts.getValue("name").equalsIgnoreCase("json"))
+				this.currentSourceEngine = this.serverDocument.uriRequest
+						.getJsonSourceEngine();
 			else { // tika is the default
 				this.currentSourceEngine = this.serverDocument.uriRequest
 						.getTikaSourceEngine();
