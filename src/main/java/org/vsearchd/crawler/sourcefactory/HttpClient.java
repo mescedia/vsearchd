@@ -314,9 +314,6 @@ public class HttpClient {
 
 			instr = entity.getContent();
 
-			log.debug("Content-Encoding:"
-					+ entity.getContentEncoding().getValue());
-
 			if (this.contentType == null) {
 				log.warn("no content-type given - treat as 'text/html' ...");
 				this.contentType = "text/html";
