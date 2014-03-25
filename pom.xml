@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.vsearchd</groupId>
   <artifactId>vsearchd-crawler</artifactId>
-  <version>0.3.1</version>
+  <version>0.3.2</version>
   <build>
 	  <plugins> 
 		  <plugin>
@@ -179,7 +179,7 @@
 	<dependency>
 		<groupId>org.json</groupId>
 		<artifactId>json</artifactId>
-	<version>20140107</version>
-</dependency>
+		<version>20140107</version>
+	</dependency>
   </dependencies>
 </project>
