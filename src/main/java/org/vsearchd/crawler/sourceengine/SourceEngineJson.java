@@ -23,9 +23,8 @@ public class SourceEngineJson extends SourceEngineBase {
 	public String getSource(InputStream inputStream) throws IOException {
 		line = null;
 
-		bufferedReader = new BufferedReader(new InputStreamReader(inputStream,
-				this.getSourceEncoding()));
-
+		bufferedReader = new BufferedReader(new InputStreamReader(inputStream, this.getSourceEncoding()));
+		
 		while ((line = bufferedReader.readLine()) != null) {
 			stringBuilder.append(line);
 		}
@@ -34,7 +33,7 @@ public class SourceEngineJson extends SourceEngineBase {
 		stringBuilder.setLength(0);
 		
 		JSONObject json = new JSONObject(jsonStr);
-		return XML.toString(json) ;	
+		return "<?xml  version=\"1.0\" encoding=\"" + this.getSourceEncoding() + "\"?> " + XML.toString(json) ;	
 	}
 
 	@Override
