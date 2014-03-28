@@ -1,0 +1,5 @@
+Version 0.3.2
+	
+	- added SourceEngineRobots
+	- added SourceEngineJson
+	- fixed HTTPS POST error
