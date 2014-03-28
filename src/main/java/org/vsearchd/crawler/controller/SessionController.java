@@ -271,7 +271,7 @@ public class SessionController {
 				int c = 0;
 				while (client.containsMessage()) {
 					log.debug("waiting for all clientmessages to be send ... ");
-					Thread.sleep(500);
+					Thread.sleep(100);
 					c++;
 					if (c > 20) {
 						log.warn("not all messages sent - force client release ... ");
