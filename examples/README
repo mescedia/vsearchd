@@ -8,10 +8,10 @@ Before running these examples it is a good idea to add 'vsearchd-client.sh' to y
 PATH environment variable. You will find it in the 'bin' folder below the projects 
 root directory.
 
-You will also have to ajust all absolte paths in all files below the 'req' and 'map' folders.
+You will also have to adjust all absolte paths in all files below the 'req' and 'map' folders.
 
 All examples target the projects test-pages on https://www.vsearchd.org/test-pages/. 
-Alternatively you may ajust the project mapping files and use another location. 
+Alternatively you may adjust the project mapping files and use another location. 
 The testpages (static HTML) resists in the 'www' folder below the projects root directory. 
 
 
